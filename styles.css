@@ -600,6 +600,7 @@ body {
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .chat_telegram:hover, .download_resume:hover {
@@ -611,6 +612,7 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+
 }
 
 /* Основные стили для модального окна */
