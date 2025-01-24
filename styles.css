@@ -1,0 +1,737 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Merriweather-Italic';
+  src: url('assets/fonts/Merriweather-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather-BlackItalic';
+  src: url('assets/fonts/Merriweather-BlackItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather-BoldItalic';
+  src: url('assets/fonts/Merriweather-BoldItalic.ttf');
+}
+
+body {
+
+  background: black;
+  font-family: 'Merriweather-Italic.ttf', sans-serif;
+  box-sizing: border-box;
+}
+
+.background-fon {
+  position: absolute; /* Фиксированное позиционирование */
+  top: 0;
+  left: 0;
+  width: 100%; /* Растягиваем на всю ширину */
+  height: auto; /* Растягиваем на всю высоту */
+  z-index: -1000; /* Отправляем на задний план */
+}
+
+.background-fon img {
+  position: fixed;
+  width: 93%; /* Растягиваем изображение на всю ширину */
+  height: auto; /* Растягиваем изображение на всю высоту */
+  object-fit: cover; /* Сохраняем пропорции и заполняем весь контейнер */
+  margin: 50px 50px 0 46px;
+
+  opacity: 45%;
+}
+
+.header {
+  padding: 10px 20px;
+  position: inherit;
+  top: 0;
+  z-index: 1000;
+
+}
+
+.menu-container {
+  display: flex;
+  align-items: center; /* Выравниваем лого и меню по вертикали */
+  max-width: max-content;
+  margin: 0 auto;
+
+}
+
+.logo img {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  margin: 0 0 0 -20px;
+
+}
+
+.menu {
+  margin-left: 80px; /* отступ между лого и меню */
+  flex-grow: 1; /* Меню занимает всё доступное пространство */
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Уменьшили расстояние между пунктами меню */
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Выравнивание пунктов меню по центру */
+}
+
+.menu-item {
+  text-align: center; /* Выравнивание текста по центру внутри каждого пункта */
+}
+
+.menu-item a {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Merriweather-BlackItalic.ttf', sans-serif;
+  line-height: 130%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap; /* Запрещаем перенос текста внутри ссылки */
+  border: 4px solid #1c847a; /* Обводка */
+  border-radius: 20px; /* Закругленные края */
+  transition: border-bottom 0.3s ease;
+  box-shadow: 0 0 5px rgb(167, 232, 226); /* Тень */
+  padding: 5px;
+}
+
+.menu-item a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Обе секции */
+.main-container {
+  display: flex;
+  flex: 1 9; /* Ширина колонок */
+  max-width: 100%; /* Ограничиваем ширину контейнера */
+  align-items: stretch; /* Растягиваем на всю высоту */
+}
+
+/* Левая секция */
+.left-section {
+  font-family: 'Merriweather-BlackItalic', sans-serif;
+  float: left; /* Секция будет слева */
+  max-width: 450px; /* Максимальная ширина контейнера */
+  padding: 0 50px 0 0;
+  margin: 0 0 0 50px;
+
+}
+
+/* Правая секция */
+.right-section {
+  font-family: 'Merriweather-BlackItalic', sans-serif;
+  float: left; /* Секция будет слева */
+  box-sizing: border-box;
+  max-width: 65%; /* Максимальная ширина контейнера */
+  padding: 10px 30px 0 50px;
+  margin: 0 20px 0 0;
+  /*   dodelat  */
+}
+
+.title {
+  font-family: 'Merriweather-BoldItalic', sans-serif; /* Указываем шрифт Corbel */
+  font-weight: bold; /* Жирный шрифт */
+  font-size: 24px; /* Размер шрифта */
+  line-height: 1.2; /* Межстрочное расстояние */
+  color: whitesmoke;
+  margin: 20px 0 40px 0;
+  text-align: left; /* Выравнивание по левому краю (или центр, если нужно) */
+}
+
+.background-block {
+  max-width: 100%;
+  background-color: darkslategrey;
+  opacity: 75%;
+  box-shadow: 0 0 10px rgb(167, 232, 226); /* Уменьшаем тень */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+
+}
+
+/* Стили для текста */
+.main-text {
+  font-size: 14px;
+  box-sizing: border-box;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Вертикальная полоса слева */
+.vert_stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px; /* Толщина полосы */
+  background-color: #10463e; /* Цвет полосы */
+}
+
+.about_me {
+  text-align: center;
+}
+
+.profile-img {
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+}
+
+.profile-prof h1 {
+  font-family: 'Merriweather-BlackItalic', sans-serif;
+  font-size: 40px;
+  color: #1fe1c9; /* Цвет шрифта, можно выбрать другой */
+  margin-bottom: 25px; /* Отступ снизу */
+  margin-top: 260px;
+}
+
+.profile-full_name p {
+  font-family: 'Merriweather-BoldItalic', sans-serif;
+  font-size: 25px;
+  color: #ffffff; /* Цвет шрифта, можно выбрать другой */
+  text-align: center; /* Выравнивание по левому краю (или центр, если нужно) */
+
+}
+
+/* Стили для блока образования */
+.block-edu {
+  height: auto;
+  margin: 10px 5px 10px 20px;
+  padding: 25px 5px 25px 10px;
+  position: relative; /* Для позиционирования полосы */
+  white-space: nowrap;
+}
+
+/* Стили для года образования*/
+.years-edu {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #10463e; /* Обводка */
+  background-color: #1c847a;
+  border-radius: 15px; /* Закругленные края */
+  font-weight: bold;
+  color: #ffffff; /* Цвет текста */
+  margin-bottom: 5px; /* Отступ снизу */
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* Стили для каждого блока образования */
+.edu-basically,
+.edu-add {
+  position: relative;
+  margin: 0 0 20px 0; /* Отступ между блоками */
+}
+
+.text p {
+  margin: 20px;
+}
+
+/* Убираем маркеры списка и отступы */
+#technical-skills-list {
+  height: auto;
+  list-style-type: none; /* Убираем маркеры (точки) */
+  padding: 25px; /* Убираем отступ слева */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+/* Стили для элементов списка технических навыков */
+.tech-skill-item {
+  display: flex; /* Оставляем flex для прогресс-бара */
+  align-items: center;
+  margin: 0 25px 10px 25px;
+}
+
+/* Стили для софт-скиллов и хард-скиллов */
+#soft-skills-list,
+#hard-skills-list {
+  list-style-type: none; /* Убираем стандартные маркеры */
+  padding: 25px; /* Убираем отступ слева */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+/* Стили для элементов списка софт-скиллов */
+.soft-skill-item {
+  display: block; /* Убираем flex, чтобы маркеры отображались */
+  margin-bottom: 10px; /* Отступ между элементами */
+  position: relative; /* Для псевдоэлемента */
+  padding-left: 20px; /* Отступ для маркера */
+}
+
+/* Стили для элементов списка хард-скиллов */
+.hard-skill-item {
+  display: block; /* Убираем flex, чтобы маркеры отображались */
+  margin-bottom: 10px; /* Отступ между элементами */
+  position: relative; /* Для псевдоэлемента */
+  padding-left: 20px; /* Отступ для маркера */
+}
+
+/* Добавляем маркеры вручную с помощью псевдоэлементов */
+.soft-skill-item::before,
+.hard-skill-item::before {
+  content: '•'; /* Маркер в виде точки */
+  position: absolute;
+  left: 0;
+  color: honeydew; /* Цвет маркера */
+  font-size: 18px; /* Размер маркера */
+}
+
+/* Стили для названия навыка */
+.skill-name {
+  flex: 1;
+
+  color: honeydew; /* Цвет текста */
+  margin-right: 10px; /* Отступ между названием и прогресс-баром */
+}
+
+/* Стили для контейнера прогресс-бара */
+.progress-bar {
+  width: 95px; /* Ширина прогресс-бара */
+  height: 12px; /* Высота прогресс-бара */
+  background-color: #000000; /* Цвет фона */
+  border-radius: 5px; /* Закругленные углы */
+  overflow: hidden; /* Скрываем выходящие за пределы элементы */
+  margin-right: 25px; /* Отступ справа */
+}
+
+/* Стили для заполненной части прогресс-бара */
+.progress-bar-inner {
+  height: 100%;
+  background-color: #1fe1c9; /* Цвет заполнения */
+  border-radius: 5px; /* Закругленные углы */
+}
+
+/* Стили для блока контактов */
+.contacts {
+  display: flex;
+  flex-direction: column; /* Элементы внутри блока располагаются вертикально */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.contacts-container {
+  display: flex;
+  gap: 70px; /* Расстояние между столбцами */
+  width: 100%;
+}
+
+
+.icons-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Убираем внешние отступы у списка */
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Отступ между элементами списка (можно уменьшить) */
+}
+
+.icon-item img {
+  width: 40px; /* Размер иконок */
+  height: 40px;
+  margin-right: 10px; /* Отступ между иконкой и текстом */
+}
+
+.icon_git {
+  filter: invert(100%); /* Полная инверсия цветов */
+}
+
+/* Стили для текста рядом с иконками */
+.icon-item p {
+  margin: 0; /* Убираем отступы у текста */
+
+  color: honeydew; /* Цвет текста */
+}
+
+/* Стили для ссылок иконок */
+.icon-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Наследует цвет текста */
+}
+
+/* Стили для Обо мне */
+.me-text p {
+  height: auto;
+
+  padding: 45px;
+}
+
+/* Стили для Опыта */
+.exp-container {
+  margin-top: 80px;
+}
+
+.exp-container-list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* Расстояние между блоками */
+}
+
+.exp-container-item {
+  width: 100%;
+}
+
+/* Стили для шапки опыта */
+.top-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Расстояние между элементами */
+  padding: 0 25px; /* Отступы слева и справа */
+  box-sizing: border-box;
+}
+
+/* Название профессии */
+.title-profession p {
+  font-size: 22px;
+  margin: 10px 0 0 0;
+  white-space: nowrap;
+  color: aquamarine;
+}
+
+/* Логотип */
+.logo-form {
+  flex: 0 0 auto;
+  max-width: 150px;
+  width: 100%;
+  text-align: center;
+
+}
+
+.logo-form img {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Ограничение размера логотипа */
+}
+
+/* Контейнер для даты опыта */
+.years-exp {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  border: 2px solid #10463e;
+  background-color: #1c847a;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.years-exp p.main-text {
+  font-size: 11px;
+  margin: 0;
+}
+
+/* Основной текст опыта */
+.prof-text p.main-text {
+  padding: 0 30px 35px 45px;
+  box-sizing: border-box;
+}
+/* Стили для Сертификаты */
+.certificates {
+  margin-top: 30px;
+
+}
+
+.cert-all {
+  padding: 35px 0 15px 50px;
+}
+
+.cert-add {
+  position: relative;
+}
+
+.vert_stripe_cer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px; /* Толщина полосы */
+  background-color: #10463e; /* Цвет полосы */
+}
+
+/* Стили для ссылок сертификаты */
+.cert-item a {
+  text-decoration: none;
+}
+
+/* Основной текст сертификата */
+.cert-item p {
+  margin: 5px 0 35px 25px;
+}
+
+/* стили года сертификата*/
+.years-cer {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #10463e; /* Обводка */
+  background-color: #1c847a;
+  border-radius: 15px; /* Закругленные края */
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff; /* Цвет текста */
+  margin-bottom: 8px; /* Отступ снизу */
+  margin-left: 18px;
+}
+
+.cert-text {
+  color: honeydew;
+  line-height: 1.5;
+  margin: 0 0 10px 25px;
+  font-size: 12px;
+}
+
+/* Стили для блока "Достижения" */
+.achievements {
+  margin-top: 100px;
+}
+
+.achiv-column {
+  padding: 25px 5px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.achiv-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.achiv-item {
+  display: flex;
+  flex-direction: column; /* Надписи под иконками */
+  align-items: center; /* Выравнивание по центру */
+  width: calc(33.33% - 20px); /* Три иконки в строке */
+  margin-bottom: 10px;
+}
+
+.achiv-item img {
+  width: 60px; /* Большие иконки */
+  height: auto;
+  margin-bottom: 10px; /* Отступ между иконкой и текстом */
+}
+
+.achiv-item p {
+
+  color: honeydew;
+  margin: 0;
+  text-align: center; /* Текст по центру */
+}
+
+/* Стили для блока "Рекомендации" */
+.recommendations {
+  margin-top: 100px;
+}
+
+.recom-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  padding: 25px 5px 15px 0;
+}
+
+.recom-list::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background-color: #54988d;
+}
+
+.recom-list li {
+  flex: 1;
+  text-align: center;
+  list-style-type: none;
+}
+
+.recom-list .text {
+
+
+  line-height: 1.5;
+}
+
+/* Стили для кнопок */
+.buttons {
+  margin-top: 80px;
+}
+
+.block-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Выравнивание по горизонтали */
+  width: 100%;
+  gap: 25%;
+}
+
+/* Стили для кнопок */
+.chat_telegram, .download_resume {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Merriweather-BoldItalic', sans-serif; /* Ваш шрифт */
+  color: white;
+  background-color: #54988d;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.chat_telegram:hover, .download_resume:hover {
+  background-color: darkcyan;
+}
+
+.download_resume p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Основные стили для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Фиксированное позиционирование */
+  z-index: 1000; /* Высокий z-index, чтобы окно было поверх других элементов */
+  left: 0;
+  top: 0;
+  width: 100%; /* На всю ширину экрана */
+  height: 100%; /* На всю высоту экрана */
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+  background-color: rgb(33, 47, 46); /* Цвет фона */
+  padding: 20px; /* Внутренние отступы */
+  margin: 200px auto;
+  border-radius: 25px; /* Закруглённые углы */
+  width: 700px; /* Ширина модального окна */
+  max-width: 90%; /* Максимальная ширина (чтобы окно не выходило за пределы экрана) */
+  min-height: 300px; /* Минимальная высота */
+  box-shadow: 0 0 20px rgb(167, 232, 226); /* Тень */
+  position: relative; /* Для позиционирования внутренних элементов */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+/* Стили для кнопки закрытия */
+.close {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10px; /* Отступ сверху */
+  right: 10px; /* Отступ справа */
+  font-size: 18px; /* Размер шрифта */
+  cursor: pointer; /* Курсор в виде указателя */
+  color: honeydew; /* Цвет иконки */
+}
+
+.title-modal {
+  color: honeydew;
+}
+
+.close:hover {
+  color: #1fe1c9; /* Цвет иконки при наведении */
+}
+
+/* Стили для формы внутри модального окна */
+#telegramForm {
+  width: 100%; /* Форма занимает всю ширину модального окна */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование элементов формы */
+}
+
+/* Стили для полей ввода */
+#telegramForm input,
+#telegramForm textarea {
+  width: 80%; /* Ширина полей ввода */
+  padding: 10px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 4px; /* Закруглённые углы */
+  font-size: 18px; /* Размер шрифта */
+}
+
+/* Стили для текстового поля */
+#telegramForm textarea {
+  resize: none; /* Разрешаем изменение высоты только по вертикали */
+
+}
+
+/* Стили для кнопки отправки */
+#telegramForm button {
+  width: 50%; /* Ширина кнопки */
+  padding: 10px; /* Внутренние отступы */
+  background-color: #219a8d; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границу */
+  border-radius: 15px; /* Закруглённые углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  font-size: 16px; /* Размер шрифта */
+  margin-top: 10px; /* Отступ сверху */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+#telegramForm button:hover {
+  background-color: #10463e; /* Цвет фона при наведении */
+}
+
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .top-title {
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    gap: 5px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .logo-form {
+    max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
+  }
+
+  .years-container {
+    max-width: 150px; /* Уменьшаем контейнер даты на мобильных устройствах */
+    padding: 5px; /* Уменьшаем отступы */
+  }
+
+  .years-container p.main-text {
+    font-size: 0.9em; /* Уменьшаем размер текста на мобильных устройствах */
+  }
+
+  .years-container {
+    max-width: 120px;
+    padding: 3px;
+  }
+
+  .years-container p.main-text {
+    font-size: 0.8em;
+  }
+}
