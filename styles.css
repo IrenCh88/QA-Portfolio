@@ -773,20 +773,20 @@ body {
     }
 
     .menu-list {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+        width: 100%; /* Занимаем всю ширину */
     }
 
     .menu-item {
-        flex: 1 1 45%;
+        flex: 1 1 45%; /* Каждый элемент занимает 45% ширины */
         text-align: center;
     }
 
     .menu-item a {
-        font-size: 12px;
-        padding: 5px;
+        font-size: 12px; /* Уменьшаем размер шрифта */
+        padding: 5px; /* Уменьшаем отступы */
     }
-
 
     /* Стили для .top-title */
     .top-title {
