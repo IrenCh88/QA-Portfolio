@@ -394,6 +394,7 @@ body {
 /* Стили для шапки опыта */
 .top-title {
     display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
     align-items: center;
     justify-content: space-between;
     gap: 20px; /* Расстояние между элементами */
@@ -402,6 +403,10 @@ body {
 }
 
 /* Название профессии */
+.title-profession {
+    flex: 1 1 200px; /* Минимальная ширина 200px */
+    min-width: 200px; /* Запрещаем сжатие меньше 200px */
+}
 .title-profession p {
     font-size: 22px;
     margin: 10px 0 0 0;
@@ -414,8 +419,6 @@ body {
     flex: 0 0 auto;
     max-width: 150px;
     width: 100%;
-    text-align: center;
-
 }
 
 .logo-form img {
