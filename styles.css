@@ -69,9 +69,10 @@ body {
 
 }
 
-.menu {
-    margin-left: 80px; /* отступ между лого и меню */
-    flex-grow: 1; /* Меню занимает всё доступное пространство */
+.menu-container {
+    display: flex;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
 .menu-list {
@@ -81,6 +82,7 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center; /* Выравнивание пунктов меню по центру */
+
 }
 
 .menu-item {
@@ -102,10 +104,12 @@ body {
     transition: border-bottom 0.3s ease;
     box-shadow: 0 0 5px rgb(167, 232, 226); /* Тень */
     padding: 5px;
+
 }
 
 .menu-item a:hover {
-    border-bottom: 2px solid white;
+
+    background-color: #1c847a; /* Цвет фона при наведении */
 }
 
 /* Обе секции */
@@ -588,7 +592,6 @@ body {
 
 /* Стили для кнопок */
 .chat_telegram, .download_resume {
-<<<<<<< HEAD
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
@@ -602,21 +605,8 @@ body {
     text-align: center;
     transition: background-color 0.3s ease;
     white-space: nowrap;
-=======
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Merriweather-BoldItalic', sans-serif; /* Ваш шрифт */
-  color: white;
-  background-color: #54988d;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  white-space: nowrap; 
->>>>>>> 02f5289717e13a63b61de20865c6019f89e8b19a
+
+
 }
 
 .chat_telegram:hover, .download_resume:hover {
@@ -631,7 +621,7 @@ body {
 
 }
 
-/* Основные стили для модального окна */
+/* Основные стили для Модального окна */
 .modal {
     display: none; /* Скрыто по умолчанию */
     position: fixed; /* Фиксированное позиционирование */
@@ -646,7 +636,7 @@ body {
 
 }
 
-/* Стили для содержимого модального окна */
+/* Стили для содержимого Модального окна */
 .modal-content {
     background-color: rgb(33, 47, 46); /* Цвет фона */
     padding: 20px; /* Внутренние отступы */
@@ -724,128 +714,148 @@ body {
 }
 
 
+/* Уменьшаем размер модального окна */
+.modal-content {
+    width: 90%; /* Занимаем 90% ширины экрана */
+    margin: 100px auto; /* Уменьшаем отступы */
+}
 
-/* Медиа-запросы для адаптивности */
+/* Уменьшаем размер текста в модальном окне */
+.title-modal {
+    font-size: 18px; /* Уменьшаем размер заголовка */
+}
+
+/* Уменьшаем размер полей ввода в модальном окне */
+#telegramForm input,
+#telegramForm textarea {
+    width: 90%; /* Занимаем 90% ширины */
+    font-size: 14px; /* Уменьшаем размер текста */
+}
+
+/* Уменьшаем размер кнопки отправки */
+#telegramForm button {
+    width: 60%; /* Уменьшаем ширину кнопки */
+    font-size: 14px; /* Уменьшаем размер текста */
+}
+
+
+/* Медиа-запрос для устройств с шириной экрана до 768px (мобильные устройства) */
 @media (max-width: 768px) {
+
+
+    /* Стили для хедера */
+    .header {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    /* Убираем фоновое изображение или уменьшаем его */
+    .background-fon img {
+        width: 100%; /* Растягиваем на всю ширину */
+        margin: 0; /* Убираем отступы */
+    }
+    /* Убираем float и делаем секции в одну колонку */
+    .main-container {
+        flex-direction: column; /* Левая и правая секции в одну колонку */
+    }
+
+    .left-section, .right-section {
+        float: none; /* Убираем float */
+        max-width: 100%; /* Занимаем всю ширину */
+        margin: 0; /* Убираем отступы */
+        padding: 10px; /* Добавляем небольшой отступ */
+    }
+
+    /* Расположение меню */
+    .menu-container {
+        display: flex;
+        align-items: center; /* Выравниваем элементы по вертикали */
+        justify-content: center; /* Центрируем элементы по горизонтали */
+    }
+
+    .menu-list {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .menu-item {
+        flex: 1 1 45%;
+        text-align: center;
+    }
+
+    .menu-item a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+
+    /* Стили для .top-title */
     .top-title {
         flex-direction: column; /* Элементы располагаются вертикально */
         align-items: flex-start; /* Выравнивание по левому краю */
         gap: 5px; /* Уменьшаем расстояние между элементами */
     }
+    /* Уменьшаем шрифты для мобильных устройств */
+    .title {
+        font-size: 20px; /* Уменьшаем размер заголовка */
+        margin: 10px 0; /* Уменьшаем отступы */
+    }
 
+    .main-text {
+        font-size: 12px; /* Уменьшаем размер текста */
+    }
+
+
+    /* Стили для логотипа */
     .logo-form {
         max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
     }
 
+    /* Стили для контейнера с датами */
     .years-container {
-        max-width: 150px; /* Уменьшаем контейнер даты на мобильных устройствах */
-        padding: 5px; /* Уменьшаем отступы */
+        max-width: 120px; /* Уменьшаем ширину контейнера */
+        padding: 3px; /* Уменьшаем отступы */
     }
 
     .years-container p.main-text {
-        font-size: 0.9em; /* Уменьшаем размер текста на мобильных устройствах */
+        font-size: 0.8em; /* Уменьшаем размер текста */
+    }
+    /* Уменьшаем размер иконок и текста в контактах */
+    .icon-item img {
+        width: 30px; /* Уменьшаем размер иконок */
+        height: 30px;
     }
 
-    .years-container {
-        max-width: 120px;
-        padding: 3px;
+    .icon-item p {
+        font-size: 12px; /* Уменьшаем размер текста */
     }
 
-    .years-container p.main-text {
-        font-size: 0.8em;
+    /* Уменьшаем размер кнопок */
+    .chat_telegram, .download_resume {
+        font-size: 14px; /* Уменьшаем размер текста */
+        padding: 8px 16px; /* Уменьшаем отступы */
     }
-=======
-/* Медиа-запрос для устройств с шириной экрана до 768px (мобильные устройства) */
-@media (min-width: 768px) {
-  .left-section {
-    flex: 1 1 40%; /* Левая секция занимает 40% ширины */
-    max-width: 40%; /* Ограничиваем ширину */
-  }
 
-  .right-section {
-    flex: 1 1 55%; /* Правая секция занимает 55% ширины */
-    max-width: 55%; /* Ограничиваем ширину */
-  }
-}
-  /* Основные изменения для мобильных устройств */
+    /* Уменьшаем размер модального окна */
+    .modal-content {
+        width: 90%; /* Занимаем 90% ширины экрана */
+        margin: 100px auto; /* Уменьшаем отступы */
+    }
 
-  /* Убираем фоновое изображение или уменьшаем его */
-  .background-fon img {
-    width: 100%; /* Растягиваем на всю ширину */
-    margin: 0; /* Убираем отступы */
-  }
+    /* Уменьшаем размер текста в модальном окне */
+    .title-modal {
+        font-size: 18px; /* Уменьшаем размер заголовка */
+    }
 
-  /* Меняем расположение меню */
-  .menu-container {
-    flex-direction: column; /* Элементы меню в одну колонку */
-    align-items: center; /* Выравниваем по центру */
-  }
+    /* Уменьшаем размер полей ввода в модальном окне */
+    #telegramForm input,
+    #telegramForm textarea {
+        width: 90%; /* Занимаем 90% ширины */
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
 
-  .menu-list {
-    flex-direction: column; /* Пункты меню в одну колонку */
-    gap: 10px; /* Уменьшаем расстояние между пунктами */
-  }
-
-  /* Убираем float и делаем секции в одну колонку */
-  .main-container {
-    flex-direction: column; /* Левая и правая секции в одну колонку */
-  }
-
-  .left-section, .right-section {
-    float: none; /* Убираем float */
-    max-width: 100%; /* Занимаем всю ширину */
-    margin: 0; /* Убираем отступы */
-    padding: 10px; /* Добавляем небольшой отступ */
-  }
-
-  /* Уменьшаем шрифты для мобильных устройств */
-  .title {
-    font-size: 20px; /* Уменьшаем размер заголовка */
-    margin: 10px 0; /* Уменьшаем отступы */
-  }
-
-  .main-text {
-    font-size: 12px; /* Уменьшаем размер текста */
-  }
-
-  /* Уменьшаем размер иконок и текста в контактах */
-  .icon-item img {
-    width: 30px; /* Уменьшаем размер иконок */
-    height: 30px;
-  }
-
-  .icon-item p {
-    font-size: 12px; /* Уменьшаем размер текста */
-  }
-
-  /* Уменьшаем размер кнопок */
-  .chat_telegram, .download_resume {
-    font-size: 14px; /* Уменьшаем размер текста */
-    padding: 8px 16px; /* Уменьшаем отступы */
-  }
-
-  /* Уменьшаем размер модального окна */
-  .modal-content {
-    width: 90%; /* Занимаем 90% ширины экрана */
-    margin: 100px auto; /* Уменьшаем отступы */
-  }
-
-  /* Уменьшаем размер текста в модальном окне */
-  .title-modal {
-    font-size: 18px; /* Уменьшаем размер заголовка */
-  }
-
-  /* Уменьшаем размер полей ввода в модальном окне */
-  #telegramForm input,
-  #telegramForm textarea {
-    width: 90%; /* Занимаем 90% ширины */
-    font-size: 14px; /* Уменьшаем размер текста */
-  }
-
-  /* Уменьшаем размер кнопки отправки */
-  #telegramForm button {
-    width: 60%; /* Уменьшаем ширину кнопки */
-    font-size: 14px; /* Уменьшаем размер текста */
-  }
->>>>>>> 02f5289717e13a63b61de20865c6019f89e8b19a
+    /* Уменьшаем размер кнопки отправки */
+    #telegramForm button {
+        width: 60%; /* Уменьшаем ширину кнопки */
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
 }
