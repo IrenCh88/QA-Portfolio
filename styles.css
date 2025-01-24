@@ -599,6 +599,7 @@ body {
   text-decoration: none;
   text-align: center;
   transition: background-color 0.3s ease;
+  white-space: nowrap; /* Запрещаем перенос */
 }
 
 .chat_telegram:hover, .download_resume:hover {
