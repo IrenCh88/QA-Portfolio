@@ -161,3 +161,14 @@ if (downloadResumeButton) {
     document.getElementById("buttons-blue").scrollIntoView({ behavior: "smooth" });
   });
 }
+
+//Принудительное скачивание
+function downloadFile(event) {
+  event.preventDefault(); // Отменяем стандартное поведение ссылки
+  const link = document.createElement('a');
+  link.href = event.target.href;
+  link.download = 'resume_QA_Chechil.pdf'; // Имя файла для скачивания
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
