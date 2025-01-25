@@ -37,11 +37,11 @@ body {
 
 .background-fon img {
     position: fixed;
-    width: 93%; /* Растягиваем изображение на всю ширину */
+    width: 100%; /* Растягиваем изображение на всю ширину */
     height: auto; /* Растягиваем изображение на всю высоту */
     object-fit: cover; /* Сохраняем пропорции и заполняем весь контейнер */
-    margin: 50px 50px 0 46px;
-
+    margin: 50px 0 0 22px;
+    padding-right: 71px;
     opacity: 45%;
 }
 
@@ -55,24 +55,18 @@ body {
 
 .menu-container {
     display: flex;
-    align-items: center; /* Выравниваем лого и меню по вертикали */
+    align-items: center;
     max-width: max-content;
     margin: 0 auto;
-
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
 .logo img {
     position: absolute;
     width: 90px;
     height: auto;
-    margin: 0 0 0 -20px;
+    margin: 10px 0 0 -10px;
 
-}
-
-.menu-container {
-    display: flex;
-    align-items: center; /* Выравниваем элементы по вертикали */
-    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
 .menu-list {
@@ -124,9 +118,9 @@ body {
 .left-section {
     font-family: 'Merriweather-BlackItalic', sans-serif;
     float: left; /* Секция будет слева */
-    max-width: 450px; /* Максимальная ширина контейнера */
+    max-width: 460px; /* Максимальная ширина контейнера */
     padding: 0 50px 0 0;
-    margin: 0 0 0 50px;
+    margin: 10px 0 0 20px;
 
 }
 
@@ -135,8 +129,8 @@ body {
     font-family: 'Merriweather-BlackItalic', sans-serif;
     float: left; /* Секция будет слева */
     box-sizing: border-box;
-    max-width: 65%; /* Максимальная ширина контейнера */
-    padding: 10px 30px 0 50px;
+    max-width: 100%; /* Максимальная ширина контейнера */
+    padding: 10px 30px 0 40px;
     margin: 0 20px 0 0;
     /*   dodelat  */
 }
@@ -158,7 +152,7 @@ body {
     box-shadow: 0 0 10px rgb(167, 232, 226); /* Уменьшаем тень */
     padding: 0; /* Убираем внутренние отступы */
     margin: 0; /* Убираем внешние отступы */
-
+    box-sizing: border-box !important;
 }
 
 /* Стили для текста */
@@ -229,7 +223,7 @@ body {
     font-weight: bold;
     color: #ffffff; /* Цвет текста */
     margin-bottom: 5px; /* Отступ снизу */
-    margin-left: 20px;
+    margin-left: 25px;
     text-align: center;
 }
 
@@ -378,6 +372,7 @@ body {
 /* Стили для Опыта */
 .exp-container {
     margin-top: 80px;
+    box-sizing: border-box !important;
 }
 
 .exp-container-list {
@@ -388,6 +383,7 @@ body {
 
 .exp-container-item {
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Стили для шапки опыта */
@@ -396,14 +392,14 @@ body {
     align-items: center; /* Выравниваем элементы по вертикали */
     justify-content: space-between; /* Распределяем пространство между элементами */
     gap: 10px; /* Расстояние между элементами */
-    padding: 0 10px; /* Отступы слева и справа */
+    padding: 0 5px; /* Отступы слева и справа */
     box-sizing: border-box;
     width: 100%; /* Занимаем всю ширину */
 }
 
 /* Название профессии */
 .title-profession {
-    flex: 1; /* Название профессии занимает доступное пространство слева */
+
     min-width: 200px; /* Минимальная ширина */
     margin: 0; /* Убираем отступы */
     text-align: left; /* Выравниваем текст по левому краю */
@@ -418,31 +414,31 @@ body {
 
 /* Логотип */
 .logo-form {
-    flex: 0 0 auto;
-    max-width: 100px; /* Уменьшаем ширину логотипа */
+    flex: 0 0 auto; /* Логотип не растягивается и не сжимается */
+    max-width: 200px; /* Уменьшаем ширину логотипа */
     width: 100%;
     text-align: center;
     margin: 0; /* Убираем отступы */
 }
 
 .logo-form img {
-    width: 100%;
+    width: 50%;
     height: auto;
     max-width: 200px; /* Ограничение размера логотипа */
 }
 
 /* Контейнер для даты опыта */
 .years-exp {
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* Дата опыта не растягивается и не сжимается */
     white-space: nowrap;
     border: 2px solid #10463e;
     background-color: #1c847a;
     border-radius: 15px;
     font-weight: bold;
     color: #ffffff;
-    padding: 5px 10px; /* Уменьшаем отступы */
+    padding: 5px 10px; /* Уменьшаем отступы в контейнере */
     text-align: center;
-    margin: 0; /* Убираем отступы */
+    margin: 5px 0 0 0;
 }
 
 .years-exp p.main-text {
@@ -745,8 +741,75 @@ body {
 }
 
 
+/* Медиа-запрос для устройств с шириной экрана до 414px */
+@media (max-width: 414px) {
+    .exp-container-item .top-title {
+        flex-direction: column !important; /* Элементы в одну колонку */
+        align-items: flex-start !important; /* Выравниваем по левому краю */
+        gap: 5px !important; /* Уменьшаем расстояние между элементами */
+        padding: 0 10px !important; /* Уменьшаем отступы слева и справа */
+    }
+
+    .exp-container-item .title-profession {
+
+        margin-bottom: 5px !important; /* Добавляем отступ снизу */
+    }
+
+    .exp-container-item .logo-form {
+        max-width: 80px !important; /* Уменьшаем ширину логотипа */
+        margin-bottom: 5px !important; /* Добавляем отступ снизу */
+    }
+
+    .exp-container-item .years-exp {
+        margin-top: 5px !important; /* Добавляем отступ сверху */
+    }
+
+    .years-exp {
+        margin-top: 5px; /* Добавляем отступ сверху */
+    }
+
+    .prof-text {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-title {
+        flex-direction: row;
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        gap: 5px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .title-profession {
+        flex: 1 1 100%; /* Название профессии занимает всю ширину */
+        text-align: center; /* Центрируем текст */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+
+    .title-profession p.main-text {
+        font-size: 19px;
+    }
+
+    .logo-form {
+        flex: 0 0 100%; /* Логотип занимает всю ширину */
+        max-width: 80px; /* Уменьшаем ширину логотипа */
+        margin: 10px 0 0 200px;
+
+    }
+
+    .years-exp {
+
+        text-align: center; /* Центрируем текст */
+        margin: 10px 0 0 200px;
+    }
+
+    .prof-text {
+        margin-left: 30px;
+    }
+}
+
 /* Медиа-запрос для устройств с шириной экрана до 768px (мобильные устройства) */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
 
 
     /* Стили для хедера */
@@ -800,8 +863,15 @@ body {
     /* Стили для .top-title */
     .top-title {
         flex-direction: column; /* Элементы в одну колонку */
+        justify-content: center;
         align-items: flex-start; /* Выравниваем по левому краю */
         gap: 5px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .title-profession {
+
+        text-align: left; /* Центрируем текст */
+        margin: 0 0 0 0;
     }
 
     .title-profession p.main-text {
@@ -809,15 +879,20 @@ body {
         white-space: normal; /* Разрешаем перенос текста */
     }
 
+    .logo-form {
+        margin: -80px 0 0 240px;
+    }
 
     /* Стили для логотипа */
-    .logo-form {
-        max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
+    .logo-form img {
+        width: 60%; /* Увеличиваем логотип на больших экранах */
+        margin: 50px 0 0 0;
+        z-index: -800;
     }
 
     .years-exp {
-        font-size: 10px; /* Уменьшаем размер шрифта */
-        padding: 5px 10px; /* Уменьшаем отступы */
+        text-align: center; /* Центрируем текст */
+        margin: -35px 0 30px 460px;
     }
 
     .prof-text p.main-text {
@@ -835,7 +910,8 @@ body {
     .main-text {
         font-size: 12px; /* Уменьшаем размер текста */
     }
-    .me-text p.main-text{
+
+    .me-text p.main-text {
         font-size: 14px;
     }
 
@@ -912,71 +988,64 @@ body {
         font-size: 0.9rem; /* Уменьшаем размер шрифта */
         margin: 5px 0 20px 15px; /* Уменьшаем отступы */
     }
-    .prof-text{
-        margin-left: 30px;
-    }
 }
 
-/* Медиа-запрос для устройств с шириной экрана до 414px */
-@media (max-width: 414px) {
-    .exp-container-item .top-title {
-        flex-direction: column !important; /* Элементы в одну колонку */
-        align-items: flex-start !important; /* Выравниваем по левому краю */
-        gap: 5px !important; /* Уменьшаем расстояние между элементами */
-        padding: 0 10px !important; /* Уменьшаем отступы слева и справа */
-    }
-
-    .exp-container-item .title-profession {
-
-        margin-bottom: 5px !important; /* Добавляем отступ снизу */
-    }
-
-    .exp-container-item .logo-form {
-        max-width: 80px !important; /* Уменьшаем ширину логотипа */
-        margin-bottom: 5px !important; /* Добавляем отступ снизу */
-    }
-
-    .exp-container-item .years-exp {
-        margin-top: 5px !important; /* Добавляем отступ сверху */
-    }
-
-    .years-exp {
-        margin-top: 5px; /* Добавляем отступ сверху */
-    }
-    .prof-text{
-        margin-left: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .top-title {
-        flex-direction: row;
-        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
-        gap: 5px; /* Уменьшаем расстояние между элементами */
-    }
-
-    .title-profession {
-        flex: 1 1 100%; /* Название профессии занимает всю ширину */
-        text-align: center; /* Центрируем текст */
-        margin-bottom: 10px; /* Добавляем отступ снизу */
-    }
-    .title-profession p.main-text{
-        font-size: 19px;
-    }
-
+@media (min-width: 968px) {
     .logo-form {
-        flex: 0 0 100%; /* Логотип занимает всю ширину */
-        max-width: 80px; /* Уменьшаем ширину логотипа */
-        margin: 0 auto; /* Центрируем логотип */
+        margin: 15px 250px 10px 0;
+    }
 
+    .logo-form img {
+        width: 40%; /* Увеличиваем логотип на больших экранах */
+        margin: 0 0 0 -150px;
+        z-index: -1000;
     }
 
     .years-exp {
-        flex: 1 1 100%; /* Дата занимает всю ширину */
         text-align: center; /* Центрируем текст */
-        margin-bottom: 10px; /* Добавляем отступ снизу */
+        margin: 0 0 0 -380px;
     }
-    .prof-text{
-        margin-left: 30px;
+}
+
+@media (min-width: 1200px) {
+    .logo-form {
+        margin: 0 0 0 -370px;
+    }
+
+    .logo-form img {
+        width: 70%; /* Увеличиваем логотип на больших экранах */
+        margin: 0 0 0 10px;
+        z-index: -400;
+    }
+
+    .years-exp {
+        text-align: center; /* Центрируем текст */
+        margin: 10px 0 0 -300px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .logo-form img {
+        width: 70%; /* Увеличиваем логотип на больших экранах */
+        margin: 0 0 0 10px;
+        z-index: -400;
+    }
+
+    .years-exp {
+        text-align: center; /* Центрируем текст */
+        margin: 10px 0 0 -30px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .logo-form img {
+        width: 100%; /* Увеличиваем логотип на больших экранах */
+        margin: 0 0 0 0;
+        z-index: -400;
+    }
+
+    .years-exp {
+        text-align: center; /* Центрируем текст */
+        margin: 0 0 0 0;
     }
 }
