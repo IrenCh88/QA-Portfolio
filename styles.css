@@ -548,7 +548,7 @@ body {
 
 /* Стили для блока "Рекомендации" */
 .recommendations {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .recom-list {
@@ -581,7 +581,7 @@ body {
 
 /* Стили для кнопок */
 .buttons {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .block-buttons {
@@ -607,8 +607,6 @@ body {
     text-align: center;
     transition: background-color 0.3s ease;
     white-space: nowrap;
-
-
 }
 
 .chat_telegram:hover, .download_resume:hover {
@@ -623,6 +621,11 @@ body {
 
 }
 
+#main-footer p {
+    color: white;
+    font-size: 10px;
+    text-align: right;
+}
 /* Основные стили для Модального окна */
 .modal {
     display: none; /* Скрыто по умолчанию */
