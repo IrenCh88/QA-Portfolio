@@ -372,7 +372,6 @@ body {
 /* Стили для Обо мне */
 .me-text p {
     height: auto;
-
     padding: 45px;
 }
 
@@ -809,9 +808,11 @@ body {
         font-size: 12px; /* Уменьшаем размер шрифта */
         white-space: normal; /* Разрешаем перенос текста */
     }
-.prof-text p{
-    font-size: 14px;
-}
+
+    .prof-text p {
+        font-size: 14px;
+    }
+
     /* Стили для логотипа */
     .logo-form {
         max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
@@ -836,6 +837,9 @@ body {
 
     .main-text {
         font-size: 12px; /* Уменьшаем размер текста */
+    }
+    .me-text p.main-text{
+        font-size: 14px;
     }
 
 
@@ -940,6 +944,7 @@ body {
         margin-top: 5px; /* Добавляем отступ сверху */
     }
 }
+
 @media (max-width: 480px) {
     .top-title {
         flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
