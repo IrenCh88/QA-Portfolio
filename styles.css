@@ -791,16 +791,19 @@ body {
     }
 
     .logo-form {
-        flex: 0 0 100%; /* Логотип занимает всю ширину */
-        max-width: 80px; /* Уменьшаем ширину логотипа */
-        margin: 10px 0 0 200px;
+        margin: -80px 0 0 340px;
+    }
 
+    /* Стили для логотипа */
+    .logo-form img {
+        width: 50%; /* Увеличиваем логотип на больших экранах */
+        margin: 50px 0 0 0;
+        z-index: -800;
     }
 
     .years-exp {
-
         text-align: center; /* Центрируем текст */
-        margin: 10px 0 0 200px;
+        margin: -35px 0 30px 460px;
     }
 
     .prof-text {
@@ -810,8 +813,6 @@ body {
 
 /* Медиа-запрос для устройств с шириной экрана до 768px (мобильные устройства) */
 @media (max-width: 768px) {
-
-
     /* Стили для хедера */
     .header {
         padding: 10px; /* Уменьшаем отступы */
@@ -880,19 +881,19 @@ body {
     }
 
     .logo-form {
-        margin: -80px 0 0 240px;
+        margin: -100px 0 0 110px;
     }
 
     /* Стили для логотипа */
     .logo-form img {
         width: 60%; /* Увеличиваем логотип на больших экранах */
         margin: 50px 0 0 0;
-        z-index: -800;
+        z-index: -900;
     }
 
     .years-exp {
         text-align: center; /* Центрируем текст */
-        margin: -35px 0 30px 460px;
+        margin: -35px 0 30px 300px;
     }
 
     .prof-text p.main-text {
