@@ -378,7 +378,7 @@ body {
 .exp-container-list {
     display: flex;
     flex-direction: column;
-    gap: 100px; /* Расстояние между блоками */
+    gap: 70px; /* Расстояние между блоками */
 }
 
 .exp-container-item {
@@ -450,14 +450,13 @@ body {
 .prof-text p.main-text {
     padding: 25px 45px 25px 45px;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 /* Стили для Сертификаты */
 .certificates {
     margin-top: 100px;
-
 }
-
 .cert-all {
     padding: 35px 0 15px 30px;
 }
