@@ -805,7 +805,7 @@ body {
     }
 
     .title-profession p.main-text {
-        font-size: 16px; /* Уменьшаем размер шрифта */
+        font-size: 16px; /*  размер шрифта */
         white-space: normal; /* Разрешаем перенос текста */
     }
 
@@ -944,6 +944,7 @@ body {
 
 @media (max-width: 480px) {
     .top-title {
+        flex-direction: row;
         flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
         gap: 5px; /* Уменьшаем расстояние между элементами */
     }
@@ -952,6 +953,9 @@ body {
         flex: 1 1 100%; /* Название профессии занимает всю ширину */
         text-align: center; /* Центрируем текст */
         margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+    .title-profession p.main-text{
+        font-size: 18px;
     }
 
     .logo-form {
