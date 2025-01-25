@@ -955,17 +955,22 @@ body {
         margin-bottom: 10px; /* Добавляем отступ снизу */
     }
     .title-profession p.main-text{
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .logo-form {
         flex: 0 0 100%; /* Логотип занимает всю ширину */
         max-width: 80px; /* Уменьшаем ширину логотипа */
         margin: 0 auto; /* Центрируем логотип */
+
     }
 
     .years-exp {
         flex: 1 1 100%; /* Дата занимает всю ширину */
         text-align: center; /* Центрируем текст */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+    .prof-text{
+        margin-left: 10px;
     }
 }
