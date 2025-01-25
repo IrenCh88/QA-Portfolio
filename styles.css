@@ -28,8 +28,8 @@ body {
 
 .background-fon {
     position: absolute; /* Фиксированное позиционирование */
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: 25px;
     width: 100%; /* Растягиваем на всю ширину */
     height: auto; /* Растягиваем на всю высоту */
     z-index: -1000; /* Отправляем на задний план */
@@ -37,11 +37,11 @@ body {
 
 .background-fon img {
     position: fixed;
-    width: 100%; /* Растягиваем изображение на всю ширину */
+    width: 95%; /* Растягиваем изображение на всю ширину */
     height: auto; /* Растягиваем изображение на всю высоту */
     object-fit: cover; /* Сохраняем пропорции и заполняем весь контейнер */
-    margin: 50px 0 0 22px;
-    padding-right: 71px;
+
+
     opacity: 45%;
 }
 
