@@ -229,7 +229,7 @@ body {
     font-weight: bold;
     color: #ffffff; /* Цвет текста */
     margin-bottom: 5px; /* Отступ снизу */
-    margin-left: 10px;
+    margin-left: 20px;
     text-align: center;
 }
 
@@ -411,8 +411,8 @@ body {
 }
 
 .title-profession p {
-    font-size: 20px;
-    margin: 10px 0 0 0;
+    font-size: 18px;
+    margin: 20px 0 0 20px;
     white-space: nowrap;
     color: aquamarine;
 }
@@ -453,7 +453,7 @@ body {
 
 /* Основной текст опыта */
 .prof-text p.main-text {
-    padding: 0 45px 5px 45px;
+    padding: 25px 45px 25px 45px;
     box-sizing: border-box;
 }
 
