@@ -812,6 +812,9 @@ body {
     .prof-text {
         margin-left: 30px;
     }
+    .certificates{
+        margin-bottom: 80px;
+    }
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 768px (мобильные устройства) */
