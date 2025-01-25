@@ -372,6 +372,7 @@ body {
 /* Стили для Опыта */
 .exp-container {
     margin-top: 80px;
+    margin-bottom: 80px;
     box-sizing: border-box !important;
 }
 
@@ -450,7 +451,7 @@ body {
 .prof-text p.main-text {
     padding: 25px 45px 25px 45px;
     box-sizing: border-box;
-    margin-bottom: 50px;
+
 }
 
 /* Стили для Сертификаты */
