@@ -791,7 +791,7 @@ body {
     }
 
     .logo-form {
-        margin: -100px 0 0 110px;
+        margin: -150px 0 0 80px;
     }
 
     /* Стили для логотипа */
@@ -803,7 +803,7 @@ body {
 
     .years-exp {
         text-align: center; /* Центрируем текст */
-        margin: -35px 0 30px 300px;
+        margin: -35px 0 30px 200px;
     }
 
     .prof-text {
