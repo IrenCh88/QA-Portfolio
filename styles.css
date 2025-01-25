@@ -804,7 +804,7 @@ body {
     }
 
     .title-profession p {
-        font-size: 14px; /* Уменьшаем размер шрифта */
+        font-size: 12px; /* Уменьшаем размер шрифта */
         white-space: normal; /* Разрешаем перенос текста */
     }
 
