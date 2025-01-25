@@ -804,7 +804,7 @@ body {
     }
 
     .title-profession p {
-        font-size: 16px; /* Уменьшаем размер шрифта */
+        font-size: 14px; /* Уменьшаем размер шрифта */
         white-space: normal; /* Разрешаем перенос текста */
     }
 
@@ -919,7 +919,7 @@ body {
     }
 
     .exp-container-item .title-profession {
-        flex: 1 1 100% !important; /* Занимаем всю ширину */
+
         margin-bottom: 5px !important; /* Добавляем отступ снизу */
     }
 
