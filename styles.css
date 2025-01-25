@@ -394,21 +394,22 @@ body {
 /* Стили для шапки опыта */
 .top-title {
     display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px; /* Расстояние между элементами */
-    padding: 0 25px; /* Отступы слева и справа */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    gap: 10px; /* Расстояние между элементами */
+    padding: 0 10px; /* Отступы слева и справа */
     box-sizing: border-box;
 }
 
 /* Название профессии */
 .title-profession {
-    flex: 1 1 200px; /* Минимальная ширина 200px */
-    min-width: 200px; /* Запрещаем сжатие меньше 200px */
+    flex: 1; /* Название профессии занимает доступное пространство слева */
+    min-width: 200px; /* Минимальная ширина */
+    margin: 0; /* Убираем отступы */
 }
+
 .title-profession p {
-    font-size: 22px;
+    font-size: 20px;
     margin: 10px 0 0 0;
     white-space: nowrap;
     color: aquamarine;
@@ -417,14 +418,16 @@ body {
 /* Логотип */
 .logo-form {
     flex: 0 0 auto;
-    max-width: 150px;
+    max-width: 100px; /* Уменьшаем ширину логотипа */
     width: 100%;
+    text-align: center;
+    margin: 0; /* Убираем отступы */
 }
 
 .logo-form img {
     width: 100%;
     height: auto;
-    max-width: 150px; /* Ограничение размера логотипа */
+    max-width: 200px; /* Ограничение размера логотипа */
 }
 
 /* Контейнер для даты опыта */
@@ -436,8 +439,9 @@ body {
     border-radius: 15px;
     font-weight: bold;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 5px 10px; /* Уменьшаем отступы */
     text-align: center;
+    margin: 0; /* Убираем отступы */
 }
 
 .years-exp p.main-text {
@@ -447,7 +451,7 @@ body {
 
 /* Основной текст опыта */
 .prof-text p.main-text {
-    padding: 0 30px 35px 45px;
+    padding: 0 45px 5px 45px;
     box-sizing: border-box;
 }
 
@@ -794,10 +798,31 @@ body {
 
     /* Стили для .top-title */
     .top-title {
-        flex-direction: column; /* Элементы располагаются вертикально */
-        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-direction: column; /* Элементы в одну колонку */
+        align-items: flex-start; /* Выравниваем по левому краю */
         gap: 5px; /* Уменьшаем расстояние между элементами */
     }
+
+    .title-profession p {
+        font-size: 16px; /* Уменьшаем размер шрифта */
+        white-space: normal; /* Разрешаем перенос текста */
+    }
+
+    /* Стили для логотипа */
+    .logo-form {
+        max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
+    }
+
+    .years-exp {
+        font-size: 10px; /* Уменьшаем размер шрифта */
+        padding: 5px 10px; /* Уменьшаем отступы */
+    }
+
+    .prof-text p.main-text {
+        padding: 0 15px 20px 15px; /* Уменьшаем отступы */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
 
     /* Уменьшаем шрифты для мобильных устройств */
     .title {
@@ -810,11 +835,6 @@ body {
     }
 
 
-    /* Стили для логотипа */
-    .logo-form {
-        max-width: 100px; /* Уменьшаем логотип на мобильных устройствах */
-    }
-
     /* Стили для контейнера с датами */
     .years-container {
         max-width: 120px; /* Уменьшаем ширину контейнера */
@@ -824,6 +844,7 @@ body {
     .years-container p.main-text {
         font-size: 0.8em; /* Уменьшаем размер текста */
     }
+
 
     /* Уменьшаем размер иконок и текста в контактах */
     .icon-item img {
@@ -885,5 +906,33 @@ body {
     .cert-item p {
         font-size: 0.9rem; /* Уменьшаем размер шрифта */
         margin: 5px 0 20px 15px; /* Уменьшаем отступы */
+    }
+}
+
+/* Медиа-запрос для устройств с шириной экрана до 414px */
+@media (max-width: 414px) {
+    .exp-container-item .top-title {
+        flex-direction: column !important; /* Элементы в одну колонку */
+        align-items: flex-start !important; /* Выравниваем по левому краю */
+        gap: 5px !important; /* Уменьшаем расстояние между элементами */
+        padding: 0 10px !important; /* Уменьшаем отступы слева и справа */
+    }
+
+    .exp-container-item .title-profession {
+        flex: 1 1 100% !important; /* Занимаем всю ширину */
+        margin-bottom: 5px !important; /* Добавляем отступ снизу */
+    }
+
+    .exp-container-item .logo-form {
+        max-width: 80px !important; /* Уменьшаем ширину логотипа */
+        margin-bottom: 5px !important; /* Добавляем отступ снизу */
+    }
+
+    .exp-container-item .years-exp {
+        margin-top: 5px !important; /* Добавляем отступ сверху */
+    }
+
+    .years-exp {
+        margin-top: 5px; /* Добавляем отступ сверху */
     }
 }
