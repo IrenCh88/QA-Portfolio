@@ -909,7 +909,9 @@ body {
     .certificates{
         margin-top: 80px;
     }
-
+.about_me-container{
+    margin-top: 50px;
+}
     /* Уменьшаем шрифты для мобильных устройств */
     .title {
         font-size: 20px; /* Уменьшаем размер заголовка */
