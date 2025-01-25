@@ -804,14 +804,11 @@ body {
         gap: 5px; /* Уменьшаем расстояние между элементами */
     }
 
-    .title-profession p {
-        font-size: 12px; /* Уменьшаем размер шрифта */
+    .title-profession p.main-text {
+        font-size: 16px; /* Уменьшаем размер шрифта */
         white-space: normal; /* Разрешаем перенос текста */
     }
 
-    .prof-text p {
-        font-size: 16px;
-    }
 
     /* Стили для логотипа */
     .logo-form {
@@ -825,7 +822,7 @@ body {
 
     .prof-text p.main-text {
         padding: 0 15px 20px 15px; /* Уменьшаем отступы */
-        font-size: 18px; /* Уменьшаем размер шрифта */
+        font-size: 14px; /* Уменьшаем размер шрифта */
     }
 
 
