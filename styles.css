@@ -791,19 +791,19 @@ body {
     }
 
     .logo-form {
-        margin: -80px 0 0 340px;
+        margin: -100px 0 0 110px;
     }
 
     /* Стили для логотипа */
     .logo-form img {
-        width: 50%; /* Увеличиваем логотип на больших экранах */
+        width: 60%; /* Увеличиваем логотип на больших экранах */
         margin: 50px 0 0 0;
-        z-index: -800;
+        z-index: -900;
     }
 
     .years-exp {
         text-align: center; /* Центрируем текст */
-        margin: -35px 0 30px 460px;
+        margin: -35px 0 30px 300px;
     }
 
     .prof-text {
