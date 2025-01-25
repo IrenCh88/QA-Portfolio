@@ -912,6 +912,9 @@ body {
         font-size: 0.9rem; /* Уменьшаем размер шрифта */
         margin: 5px 0 20px 15px; /* Уменьшаем отступы */
     }
+    .prof-text{
+        margin-left: 30px;
+    }
 }
 
 /* Медиа-запрос для устройств с шириной экрана до 414px */
@@ -939,6 +942,9 @@ body {
 
     .years-exp {
         margin-top: 5px; /* Добавляем отступ сверху */
+    }
+    .prof-text{
+        margin-left: 30px;
     }
 }
 
@@ -971,6 +977,6 @@ body {
         margin-bottom: 10px; /* Добавляем отступ снизу */
     }
     .prof-text{
-        margin-left: 10px;
+        margin-left: 30px;
     }
 }
