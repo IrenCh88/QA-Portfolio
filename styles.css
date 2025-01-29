@@ -192,9 +192,8 @@ body {
     font-family: 'Merriweather-BlackItalic', sans-serif;
     font-size: 40px;
     color: #1fe1c9; /* Цвет шрифта, можно выбрать другой */
-    margin-bottom: 25px; /* Отступ снизу */
-    margin-top: 260px;
-}
+    margin: 250px 0 10px 0;
+    }
 
 .profile-full_name p {
     font-family: 'Merriweather-BoldItalic', sans-serif;
@@ -458,6 +457,7 @@ body {
 .certificates {
     margin-top: 100px;
 }
+
 .cert-all {
     padding: 35px 0 15px 30px;
 }
@@ -626,6 +626,7 @@ body {
     font-size: 10px;
     text-align: right;
 }
+
 /* Основные стили для Модального окна */
 .modal {
     display: none; /* Скрыто по умолчанию */
@@ -812,7 +813,8 @@ body {
     .prof-text {
         margin-left: 30px;
     }
-    .certificates{
+
+    .certificates {
         margin-top: 80px;
     }
 }
@@ -906,12 +908,15 @@ body {
         padding: 0 15px 20px 15px; /* Уменьшаем отступы */
         font-size: 14px; /* Уменьшаем размер шрифта */
     }
-    .certificates{
+
+    .certificates {
         margin-top: 80px;
     }
-.about_me-container{
-    margin-top: 50px;
-}
+
+    .about_me-container {
+        margin-top: 50px;
+    }
+
     /* Уменьшаем шрифты для мобильных устройств */
     .title {
         font-size: 20px; /* Уменьшаем размер заголовка */
