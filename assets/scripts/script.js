@@ -172,3 +172,27 @@ function downloadFile(event) {
   link.click();
   document.body.removeChild(link);
 }
+
+
+let currentLang = 'ru';
+
+function updateLanguage(lang) {
+  // Обновляем текст на странице
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+}
+
+document.getElementById('language-toggle').addEventListener('click', function () {
+  currentLang = currentLang === 'ru' ? 'en' : 'ru';
+  updateLanguage(currentLang);
+  this.textContent = currentLang === 'ru' ? 'En' : 'Ru';
+});
+
+// Инициализация языка при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  updateLanguage(currentLang);
+});

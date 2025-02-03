@@ -102,9 +102,33 @@ body {
 }
 
 .menu-item a:hover {
-
     background-color: #1c847a; /* Цвет фона при наведении */
 }
+
+.menu-item button {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: 'Merriweather-BlackItalic.ttf', sans-serif;
+    line-height: 130%;
+    text-decoration: none;
+    cursor: pointer;
+    color: #10463e;
+    text-align: center;
+    white-space: nowrap; /* Запрещаем перенос текста внутри ссылки */
+    border: 4px solid #1c847a; /* Обводка */
+    border-radius: 20px; /* Закругленные края */
+    transition: border-bottom 0.3s ease;
+    box-shadow: 0 0 5px rgb(167, 232, 226); /* Тень */
+    padding: 5px;
+
+}
+
+.menu-item button:hover {
+    background-color: #1c847a; /* Цвет фона при наведении */
+}
+
+
+
 
 /* Обе секции */
 .main-container {

@@ -1,399 +1,412 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QA Portfolio: IrenChechil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Portfolio: IrenChechil</title>
 
-  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"/>
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="assets/favicon/site.webmanifest"/>
 
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="header">
-  <div class="menu-container">
-
-    <nav class="menu">
-      <div class="button_lang">
-        <button id="language-toggle">En</button>
-      </div>
-      <ul class="menu-list">
-        <li class="menu-item"><a data-link="contacts">Контакты</a></li>
-        <li class="menu-item"><a data-link="exp-container">Опыт работы</a></li>
-        <li class="menu-item"><a data-link="tskills">Технические скиллы</a></li>
-        <li class="menu-item"><a data-link="certificates">Сертификаты</a></li>
-        <li class="menu-item"><a data-link="buttons-blue">Написать сообщение</a></li>
-        <li class="menu-item"><a data-link="buttons-blue">Скачать резюме</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="menu-container">
+        <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item"><<button id="language-toggle">En</button></li>
+                <li class="menu-item"><a data-link="contacts" data-translate="contacts">Контакты</a></li>
+                <li class="menu-item"><a data-link="exp-container" data-translate="experience">Опыт работы</a></li>
+                <li class="menu-item"><a data-link="tskills" data-translate="technicalSkills">Технические скиллы</a></li>
+                <li class="menu-item"><a data-link="certificates" data-translate="certificates">Сертификаты</a></li>
+                <li class="menu-item"><a data-link="buttons-blue" data-translate="writeMessage">Написать сообщение</a></li>
+                <li class="menu-item"><a data-link="buttons-blue" data-translate="downloadResume">Скачать резюме</a></li></ul>
+        </nav>
+    </div>
 </header>
 <main>
-  <div class="main-container" id="main-container">
-    <div class="background-fon">
-      <img src="assets/images/background.png">
+    <div class="main-container" id="main-container">
+        <div class="background-fon">
+            <img src="assets/images/background.png">
+        </div>
+
+        <!-- Здесь контент слева (фото и скиллы) -->
+        <div class="left-section" id="left">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Логотип" class="logo">
+            </div>
+            <!--  контент  (фото) -->
+            <section class="about_me">
+                <div class="profile-img">
+                    <img src="assets/images/profile-image.png" alt="Фото профиля" class="profile-image">
+                </div>
+                <div class="profile-prof">
+                    <h1>QA Engineer</h1>
+                </div>
+                <div class="profile-full_name">
+                    <p class="text-name">Чечиль<br>Ирина Юрьевна</p>
+                </div>
+            </section>
+
+            <!--  контент  (образование) -->
+            <section class="education" id="education">
+                <h2 class="title" data-translate="title-education">Образование</h2>
+                <div class="background-block">
+                    <div class="block-edu">
+                        <div class="edu-basically">
+                            <div class="vert_stripe"></div>
+                            <div class="years-edu">
+                                <p class="main-text">2008</p></div>
+                            <div class="text">
+                                <p class="main-text" data-translate="title-prof1-education">
+                                    Ангарский Техникум РиПТ<br>
+                                    Техник АСУ и обработки информации</p>
+                            </div>
+                        </div>
+                        <div class="edu-add">
+                            <div class="vert_stripe"></div>
+                            <div class="years-edu">
+                                <p class="main-text">2023</p>
+                            </div>
+                            <div class="text">
+                                <p class="main-text" data-translate="title-prof2-education">
+                                    SkillFactory, Тестировщик<br>
+                                    Тестировщик-автоматизатор на Python (QAP)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Технические скиллы -->
+            <section class="block-tskills" id="tskills">
+                <h2 class="title" data-translate="title-tskills">Технические скиллы</h2>
+                <div class="background-block">
+                    <div class="tskills" >
+                        <ul id="technical-skills-list" data-translate="tskill"></ul> <!-- Сюда будут добавляться навыки -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Софт-скиллы -->
+            <section class="block-soft" id="skl-s">
+                <h2 class="title" data-translate="title-sskills">Софт-скиллы</h2>
+                <div class="background-block">
+                    <div class="skills">
+                        <ul id="soft-skills-list" data-translate= "sskill"></ul> <!-- Сюда будут добавляться софт-скиллы -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Хард-скиллы -->
+            <section class="block-hard" id="skl-h">
+                <h2 class="title"data-translate=title-hskills>Хард-скиллы</h2>
+                <div class="background-block">
+                    <div class="skills">
+                        <ul id="hard-skills-list" data-translate="hskill"></ul> <!-- Сюда будут добавляться хард-скиллы -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Здесь основной контент справа (опыт и достижения)-->
+        <div class="right-section" id="right">
+
+            <!-- Контент  (контакты)-->
+            <section class="contacts" id="contacts">
+                <h2 class="title">Контакты</h2>
+                <div class="contacts-container">
+                    <!-- Первый столбец -->
+                    <div class="contacts-column">
+                        <ul class="icons-list">
+                            <li class="icon-item">
+                                <a href="https://github.com/IrenCh88" target="_blank">
+                                    <img src="assets/images/icon_git.png" alt="GitHub" class="icon_git">
+                                    <p class="main-text">GitHub</p>
+                                </a>
+                            </li>
+                            <li class="icon-item">
+                                <a href="https://irkutsk.hh.ru/resume/ce7da512ff0e463c8f0039ed1f744d7a6d5667"
+                                   target="_blank">
+                                    <img src="assets/images/icon_hh.png" alt="HeadHunter"/>
+                                    <p class="main-text">Резюме на hh</p>
+                                </a>
+                            </li>
+                            <li class="icon-item">
+                                <a href="https://wa.me/79500731140" target="_blank">
+                                    <img src="assets/images/icon_WhatsApp.png" alt="WhatsApp"/>
+                                    <p class="main-text">WhatsApp</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Второй  столбец -->
+                    <div class="contacts-column">
+                        <ul class="icons-list">
+                            <li class="icon-item">
+                                <img src="assets/images/icon_phone.png" alt="Телефон"/>
+                                <p class="main-text">+7-950-073-1140</p>
+                            </li>
+                            <li class="icon-item">
+                                <img src="assets/images/icon_mail.png" alt="Почта"/>
+                                <p class="main-text">IrenChechil&#64;gmail.com</p>
+                            </li>
+                            <li class="icon-item">
+                                <img src="assets/images/icon_beacon.png" alt="Местоположение"/>
+                                <p class="main-text">Ангарск, Иркутская область</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контент  (рассказ о себе)-->
+            <section class="about_me-container">
+                <div class="me-text-container">
+                    <h2 class="title">Обо мне</h2>
+                    <div class="background-block">
+                        <div class="me-text">
+                            <p class="main-text">Тестировщик с опытом в ручном тестировании и стремлением развиваться в
+                                автоматизации.
+                                Обладаю аналитическими способностями, вниманием к деталям и готовностью решать сложные
+                                задачи. Постоянно
+                                осваиваю новые технологии и стремлюсь улучшать качество ПО. Моя карьера началась с
+                                техникума «Техника
+                                АСУ», и теперь я ищу новые вызовы для профессионального роста и развития.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контент  (Опыт работы)-->
+            <section class="exp-container" id="exp-container">
+                <h2 class="title">Опыт работы</h2>
+                <div class="exp-container-list" id="exp-container-list">
+
+
+                    <!--место работы - последние -->
+                    <div class="exp-container-item">
+                        <div class="background-block">
+
+                            <div class="top-title">
+                                <div class="title-profession">
+                                    <p class="main-text">
+                                        QA Engineer/<br>
+                                        Инженер по тестированию</p>
+                                </div>
+                                <div class="logo-form">
+                                    <img src="assets/images/logo_webcetera.png" alt="Логотип WebCetera">
+                                </div>
+                                <div class="years-exp">
+                                    <p class="main-text">Фев 2024 - Фев 2025</p>
+                                </div>
+                            </div>
+
+
+                            <div class="prof-text">
+                                <p class="main-text">Работала над различными видами тестирования: функциональным,
+                                    регрессионным,
+                                    нагрузочным, UI/UX, юзабилити и smoke. Тестировала веб-приложения, включая
+                                    кроссбраузерное и
+                                    кроссплатформенное тестирование на мобильных устройствах. Поддерживала и
+                                    разрабатывала тестовую
+                                    документацию: чек-листы, тест-кейсы и баг-репорты. Работала с инструментами: Jira,
+                                    YouTrack, GitLab,
+                                    Qase.io, JMeter, Postman, Docker, PyCharm. Использовала DevTools для анализа
+                                    скорости загрузки
+                                    страниц,
+                                    ошибок в консоли и анализа токенов. Писала автотесты на Python + Selenium, что
+                                    позволило сократить
+                                    время
+                                    регрессионного тестирования.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--место работы - первое -->
+                    <div class="exp-container-item">
+                        <div class="background-block">
+
+                            <div class="top-title">
+                                <div class="title-profession">
+                                    <p class="main-text">QA Manual<br>Тестировщик</p>
+                                </div>
+                                <div class="logo-form">
+                                    <img src="assets/images/logo_arena.png" alt="Логотип WebCetera">
+                                </div>
+                                <div class="years-exp">
+                                    <p class="main-text">Март 2023 - Фев 2024</p>
+                                </div>
+                            </div>
+                            <div class="prof-text">
+                                <p class="main-text">Занималась функциональным и нефункциональным тестированием
+                                    различных веб-проектов,
+                                    включая сайты-визитки, интернет-магазины и корпоративные сайты. Проводила GUI,
+                                    юзабилити,
+                                    кроссбраузерное и кроссплатформенное тестирование, а также проверку локализации. В
+                                    работе использовала
+                                    DevTools для тестирования верстки и анализа производительности, включая проверку
+                                    мобильных версий на
+                                    Android и iOS. Работала с MySQL для проверки данных через SQL-запросы. Все баги
+                                    фиксировались в
+                                    багтрекере Redmine. Создавала и поддерживала тестовую документацию: тест-кейсы,
+                                    чек-листы и
+                                    баг-репорты.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Контент  (Сертификаты)-->
+            <section class="certificates" id="certificates">
+                <h2 class="title">Сертификаты</h2>
+                <div class="background-block">
+                    <div class="cert-all">
+
+                        <!-- Сертификат 2024-->
+                        <div class="cert-add" id="cert3">
+                            <div class="vert_stripe_cer"></div>
+                            <div class="years-cer">2024</div>
+                            <div class="cert-item">
+                                <a href="assets/documents/certificate14623.jpeg" target="_blank">
+                                    <p class="main-text">Frontend: Start</p></a>
+                            </div>
+                        </div>
+
+                        <!-- Сертификат 2023-->
+                        <div class="cert-add" id="cert2">
+                            <div class="vert_stripe_cer"></div>
+                            <div class="years-cer">2023</div>
+                            <div class="cert-item">
+                                <a href="assets/documents/stepik-certificate.pdf" target="_blank">
+                                    <p class="main-text">Stepik: Поколение Python: курс для начинающих</p></a>
+                            </div>
+
+                            <!-- Сертификат 2023 - 2-->
+                            <div class="cert-item">
+                                <a href="assets/documents/skilFactory_QAP.pdf" target="_blank">
+                                    <p class="main-text">SkillFactory: Тестировщик-автоматизатор на Python (QAP)</p></a>
+
+                            </div>
+                        </div>
+
+                        <!-- Сертификат 2022-->
+                        <div class="cert-add" id="cert1">
+                            <div class="vert_stripe_cer"></div>
+                            <div class="years-cer">2022</div>
+                            <div class="cert-item">
+                                <a href="assets/documents/certificate-Aliceskills.pdf" target="_blank">
+                                    <p class="main-text">Yandex: Навыки Алиса</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контент  (Достижения)-->
+            <section class="achievements" id="achievements">
+                <h2 class="title">Достижения</h2>
+                <div class="background-block">
+                    <div class="block-achiv">
+                        <div class="achiv-column">
+                            <ul class="achiv-list">
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_ownsite.png" alt="Иконка сайта">
+                                    <p class="main-text">Разработка лэндинга</p>
+                                </li>
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_conversion.png" alt="Иконка перехода">
+                                    <p class="main-text">Переход в IT</p>
+                                </li>
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_alice2.png" alt="Иконка Алисы">
+                                    <p class="main-text">Хакатон "Навыки Алисы»</p>
+                                </li>
+                            </ul>
+                            <ul class="achiv-list">
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_book.png" alt="Иконка книги">
+                                    <p class="main-text">Дизайн книги</p>
+                                </li>
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_proj.png" alt="Иконка проекта">
+                                    <p class="main-text">Успешные релизы</p>
+                                </li>
+                                <li class="achiv-item">
+                                    <img src="assets/images/icon_literacy.png" alt="Иконка грамоты">
+                                    <p class="main-text">Грамота для города</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контент  (Рекомендации)-->
+            <section class="recommendations" id="recommendations">
+                <h2 class="title">Рекомендации</h2>
+                <div class="background-block">
+                    <ul class="recom-list">
+                        <li class="text">
+                            <p class="main-text">
+                                WEBCETERA Digital design studio<br>
+                                Андрей Алексеевич<br>
+                                Директор WebCetera
+                            </p>
+                        </li>
+                        <li class="text">
+                            <p class="main-text">
+                                Медико-Санитарная Часть №36<br>
+                                Михаил Анатольевич<br>
+                                Начальник Статистического отдела
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Контент  (download and write buttons)-->
+            <section class="buttons" id="buttons-blue">
+                <div class="block-buttons">
+                    <div class="button_massg">
+                        <button class="chat_telegram" onclick="openModal()">Написать сообщение</button>
+                    </div>
+                    <div class="button_downl">
+                        <a href="assets/documents/resume_QA_Chechil.pdf" class="download_resume"
+                           onclick="downloadFile(event)">Скачать резюме</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
     </div>
-
-    <!-- Здесь контент слева (фото и скиллы) -->
-    <div class="left-section" id="left">
-      <div class="logo">
-        <img src="assets/images/logo.png" alt="Логотип" class="logo">
-      </div>
-      <!--  контент  (фото) -->
-      <section class="about_me">
-        <div class="profile-img">
-          <img src="assets/images/profile-image.png" alt="Фото профиля" class="profile-image">
-        </div>
-        <div class="profile-prof">
-          <h1>QA Engineer</h1>
-        </div>
-        <div class="profile-full_name">
-          <p class="text-name">Чечиль<br>Ирина Юрьевна</p>
-        </div>
-      </section>
-
-      <!--  контент  (образование) -->
-      <section class="education" id="education">
-        <h2 class="title">Образование</h2>
-        <div class="background-block">
-          <div class="block-edu">
-            <div class="edu-basically">
-              <div class="vert_stripe"></div>
-              <div class="years-edu">
-                <p class="main-text">2008</p></div>
-              <div class="text">
-                <p class="main-text">
-                  Ангарский Техникум РиПТ<br>
-                  Техник АСУ и обработки информации</p>
-              </div>
-            </div>
-            <div class="edu-add">
-              <div class="vert_stripe"></div>
-              <div class="years-edu">
-                <p class="main-text">2023</p>
-              </div>
-              <div class="text">
-                <p class="main-text">
-                  SkillFactory, Тестировщик<br>
-                  Тестировщик-автоматизатор на Python (QAP)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Технические скиллы -->
-      <section class="block-tskills" id="tskills">
-        <h2 class="title">Технические скиллы</h2>
-        <div class="background-block">
-          <div class="tskills">
-            <ul id="technical-skills-list"></ul> <!-- Сюда будут добавляться навыки -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Софт-скиллы -->
-      <section class="block-soft" id="skl-s">
-        <h2 class="title">Софт-скиллы</h2>
-        <div class="background-block">
-          <div class="skills">
-            <ul id="soft-skills-list"></ul> <!-- Сюда будут добавляться софт-скиллы -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Хард-скиллы -->
-      <section class="block-hard" id="skl-h">
-        <h2 class="title">Хард-скиллы</h2>
-        <div class="background-block">
-          <div class="skills">
-            <ul id="hard-skills-list"></ul> <!-- Сюда будут добавляться хард-скиллы -->
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- Здесь основной контент справа (опыт и достижения)-->
-    <div class="right-section" id="right">
-
-      <!-- Контент  (контакты)-->
-      <section class="contacts" id="contacts">
-        <h2 class="title">Контакты</h2>
-        <div class="contacts-container">
-          <!-- Первый столбец -->
-          <div class="contacts-column">
-            <ul class="icons-list">
-              <li class="icon-item">
-                <a href="https://github.com/IrenCh88" target="_blank">
-                  <img src="assets/images/icon_git.png" alt="GitHub" class="icon_git">
-                  <p class="main-text">GitHub</p>
-                </a>
-              </li>
-              <li class="icon-item">
-                <a href="https://irkutsk.hh.ru/resume/ce7da512ff0e463c8f0039ed1f744d7a6d5667" target="_blank">
-                  <img src="assets/images/icon_hh.png" alt="HeadHunter"/>
-                  <p class="main-text">Резюме на hh</p>
-                </a>
-              </li>
-              <li class="icon-item">
-                <a href="https://wa.me/79500731140" target="_blank">
-                  <img src="assets/images/icon_WhatsApp.png" alt="WhatsApp"/>
-                  <p class="main-text">WhatsApp</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Второй  столбец -->
-          <div class="contacts-column">
-            <ul class="icons-list">
-              <li class="icon-item">
-                <img src="assets/images/icon_phone.png" alt="Телефон"/>
-                <p class="main-text">+7-950-073-1140</p>
-              </li>
-              <li class="icon-item">
-                <img src="assets/images/icon_mail.png" alt="Почта"/>
-                <p class="main-text">IrenChechil&#64;gmail.com</p>
-              </li>
-              <li class="icon-item">
-                <img src="assets/images/icon_beacon.png" alt="Местоположение"/>
-                <p class="main-text">Ангарск, Иркутская область</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Контент  (рассказ о себе)-->
-      <section class="about_me-container">
-        <div class="me-text-container">
-          <h2 class="title">Обо мне</h2>
-          <div class="background-block">
-            <div class="me-text">
-              <p class="main-text">Тестировщик с опытом в ручном тестировании и стремлением развиваться в автоматизации.
-                Обладаю аналитическими способностями, вниманием к деталям и готовностью решать сложные задачи. Постоянно
-                осваиваю новые технологии и стремлюсь улучшать качество ПО. Моя карьера началась с техникума «Техника
-                АСУ», и теперь я ищу новые вызовы для профессионального роста и развития.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Контент  (Опыт работы)-->
-      <section class="exp-container" id="exp-container">
-        <h2 class="title">Опыт работы</h2>
-        <div class="exp-container-list" id="exp-container-list">
-
-
-          <!--место работы - последние -->
-          <div class="exp-container-item">
-            <div class="background-block">
-
-              <div class="top-title">
-                <div class="title-profession">
-                  <p class="main-text">
-                    QA Engineer/<br>
-                    Инженер по тестированию</p>
-                </div>
-                <div class="logo-form">
-                  <img src="assets/images/logo_webcetera.png" alt="Логотип WebCetera">
-                </div>
-                <div class="years-exp">
-                  <p class="main-text">Фев 2024 - Янв 2025</p>
-                </div>
-              </div>
-
-
-              <div class="prof-text">
-                <p class="main-text">Работала над различными видами тестирования: функциональным, регрессионным,
-                  нагрузочным, UI/UX, юзабилити и smoke. Тестировала веб-приложения, включая кроссбраузерное и
-                  кроссплатформенное тестирование на мобильных устройствах. Поддерживала и разрабатывала тестовую
-                  документацию: чек-листы, тест-кейсы и баг-репорты. Работала с инструментами: Jira, YouTrack, GitLab,
-                  Qase.io, JMeter, Postman, Docker, PyCharm. Использовала DevTools для анализа скорости загрузки
-                  страниц,
-                  ошибок в консоли и анализа токенов. Писала автотесты на Python + Selenium, что позволило сократить
-                  время
-                  регрессионного тестирования.</p>
-              </div>
-            </div>
-          </div>
-
-          <!--место работы - первое -->
-          <div class="exp-container-item">
-            <div class="background-block">
-
-              <div class="top-title">
-                <div class="title-profession">
-                  <p class="main-text">QA Manual<br>Тестировщик</p>
-                </div>
-                <div class="logo-form">
-                  <img src="assets/images/logo_arena.png" alt="Логотип WebCetera">
-                </div>
-                <div class="years-exp">
-                  <p class="main-text">Март 2023 - Фев 2024</p>
-                </div>
-              </div>
-              <div class="prof-text">
-                <p class="main-text">Занималась функциональным и нефункциональным тестированием различных веб-проектов,
-                  включая сайты-визитки, интернет-магазины и корпоративные сайты. Проводила GUI, юзабилити,
-                  кроссбраузерное и кроссплатформенное тестирование, а также проверку локализации. В работе использовала
-                  DevTools для тестирования верстки и анализа производительности, включая проверку мобильных версий на
-                  Android и iOS. Работала с MySQL для проверки данных через SQL-запросы. Все баги фиксировались в
-                  багтрекере Redmine. Создавала и поддерживала тестовую документацию: тест-кейсы, чек-листы и
-                  баг-репорты.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Контент  (Сертификаты)-->
-      <section class="certificates" id="certificates">
-        <h2 class="title">Сертификаты</h2>
-        <div class="background-block">
-          <div class="cert-all">
-
-            <!-- Сертификат 2024-->
-            <div class="cert-add" id="cert3">
-              <div class="vert_stripe_cer"></div>
-              <div class="years-cer">2024</div>
-              <div class="cert-item">
-                <a href="assets/documents/certificate14623.jpeg" target="_blank">
-                  <p class="main-text">Frontend: Start</p></a>
-              </div>
-            </div>
-
-            <!-- Сертификат 2023-->
-            <div class="cert-add" id="cert2">
-              <div class="vert_stripe_cer"></div>
-              <div class="years-cer">2023</div>
-              <div class="cert-item">
-                <a href="assets/documents/stepik-certificate.pdf" target="_blank">
-                  <p class="main-text">Stepik: Поколение Python: курс для начинающих</p></a>
-              </div>
-
-              <!-- Сертификат 2023 - 2-->
-              <div class="cert-item">
-                <a href="assets/documents/skilFactory_QAP.pdf" target="_blank">
-                  <p class="main-text">SkillFactory: Тестировщик-автоматизатор на Python (QAP)</p></a>
-
-              </div>
-            </div>
-
-            <!-- Сертификат 2022-->
-            <div class="cert-add" id="cert1">
-              <div class="vert_stripe_cer"></div>
-              <div class="years-cer">2022</div>
-              <div class="cert-item">
-                <a href="assets/documents/certificate-Aliceskills.pdf" target="_blank">
-                  <p class="main-text">Yandex: Навыки Алиса</p></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Контент  (Достижения)-->
-      <section class="achievements" id="achievements">
-        <h2 class="title">Достижения</h2>
-        <div class="background-block">
-          <div class="block-achiv">
-            <div class="achiv-column">
-              <ul class="achiv-list">
-                <li class="achiv-item">
-                  <img src="assets/images/icon_ownsite.png" alt="Иконка сайта">
-                  <p class="main-text">Разработка лэндинга</p>
-                </li>
-                <li class="achiv-item">
-                  <img src="assets/images/icon_conversion.png" alt="Иконка перехода">
-                  <p class="main-text">Переход в IT</p>
-                </li>
-                <li class="achiv-item">
-                  <img src="assets/images/icon_alice2.png" alt="Иконка Алисы">
-                  <p class="main-text">Хакатон "Навыки Алисы»</p>
-                </li>
-              </ul>
-              <ul class="achiv-list">
-                <li class="achiv-item">
-                  <img src="assets/images/icon_book.png" alt="Иконка книги">
-                  <p class="main-text">Дизайн книги</p>
-                </li>
-                <li class="achiv-item">
-                  <img src="assets/images/icon_proj.png" alt="Иконка проекта">
-                  <p class="main-text">Успешные релизы</p>
-                </li>
-                <li class="achiv-item">
-                  <img src="assets/images/icon_literacy.png" alt="Иконка грамоты">
-                  <p class="main-text">Грамота для города</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Контент  (Рекомендации)-->
-      <section class="recommendations" id="recommendations">
-        <h2 class="title">Рекомендации</h2>
-        <div class="background-block">
-          <ul class="recom-list">
-            <li class="text">
-              <p class="main-text">
-                WEBCETERA Digital design studio<br>
-                Андрей Алексеевич<br>
-                Директор WebCetera
-              </p>
-            </li>
-            <li class="text">
-              <p class="main-text">
-                Медико-Санитарная Часть №36<br>
-                Михаил Анатольевич<br>
-                Начальник Статистического отдела
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Контент  (download and write buttons)-->
-      <section class="buttons" id="buttons-blue">
-        <div class="block-buttons">
-          <div class="button_massg">
-            <button class="chat_telegram" onclick="openModal()">Написать сообщение</button>
-          </div>
-          <div class="button_downl">
-            <a href="assets/documents/resume_QA_Chechil.pdf" class="download_resume" onclick="downloadFile(event)">Скачать резюме</a>
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-  </div>
 </main>
 <!-- Модальное окно -->
 <div id="telegramModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 class="title-modal">Написать сообщение</h2>
-    <form id="telegramForm">
-      <input type="text" id="username" placeholder="Ваше имя в Telegram" required>
-      <textarea id="message" rows="5" placeholder="Ваше сообщение" required></textarea>
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="title-modal" data-translate="title-modal">Написать сообщение</h2>
+        <form id="telegramForm">
+            <input type="text" id="username" placeholder="Ваше имя в Telegram" required>
+            <textarea id="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit" data-translate="submit">Отправить</button>
+        </form>
+    </div>
 </div>
 
 <script src="assets/scripts/script.js"></script>
 <script src="assets/scripts/translations.js"></script>
 <footer id="main-footer">
-  <p>&copy; 2025 IrenCh. All rights reserved.</p>
+    <p>&copy; 2025 IrenCh. All rights reserved.</p>
 </footer>
 </body>
 </html>
