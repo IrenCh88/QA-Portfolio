@@ -1,5 +1,5 @@
 const translations = {
-    ru: {
+    ru1: {
         "contacts": "Контакты",
         "experience": "Опыт работы",
         "technicalSkills": "Технические скиллы",
@@ -35,8 +35,8 @@ const translations = {
         "text-icon5": "Успешные релизы",
         "text-icon6": "Грамота для города",
         "recommendations": "Рекомендации",
-        "recom-1": "WEBCETERA Digital design studio<br>Андрей Алексеевич<br>Директор WebCetera",
-        "recom-2": "Медико-Санитарная Часть №36<br>Михаил Анатольевич<br>Начальник Статистического отдела",
+        "recom-1": "WEBCETERA Digital design studio Андрей Алексеевич Директор WebCetera",
+        "recom-2": "Медико-Санитарная Часть №36 Михаил Анатольевич Начальник Статистического отдела",
         "write-massg": "Написать сообщение",
         "download-resume": "Скачать резюме",
         "title-modal": "Написать сообщение",
@@ -50,8 +50,10 @@ const translations = {
         "writeMessage": "Write a Message",
         "downloadResume": "Download Resume",
         "title-education": "Education",
-        "title-prof1-education": "Angarsk Technical College of RIPT<br>Technician of ACS and Information Processing",
-        "title-prof2-education": "SkillFactory, Tester<br>Automation Tester in Python (QAP)",
+        "title-prof1-education": "Angarsk Technical College of Advertising and Industrial Technology" +
+            "Technician of ACS and Information Processing",
+        "title-prof2-education": "SkillFactory, Tester" +
+            "Automation Tester in Python (QAP)",
         "title-tskills": "Technical Skills",
         "title-sskills": "Soft Skills",
         "title-hskills": "Hard Skills",
@@ -60,15 +62,17 @@ const translations = {
         "title-about-me": "About Me",
         "main-text-about-me-text": "Tester with experience in manual testing and a desire to develop in automation...",
         "title-exp": "Work Experience",
-        "main-text-exp-title": "QA Engineer/<br>Test Engineer",
+        "main-text-exp-title": "QA Engineer/" +
+            "Test Engineer",
         "data-exp1": "Feb 2024 - Feb 2025",
         "main-text-exp-text": "Worked on various types of testing...",
-        "main-text-exp2": "QA Manual<br>Tester",
+        "main-text-exp2": "QA Manual" +
+            "Tester",
         "data-exp2": "Mar 2023 - Feb 2024",
         "main-textexp-text2": "Engaged in functional and non-functional testing...",
         "title-certificate": "Certificates",
         "main-text-name2": "Stepik: Python Generation: Beginner's Course",
-        "main-text-name3": "SkillFactory: Automation Tester in Python (QAP)",
+        "main-text-name3": "SkillFactory: Quality Assurance Python (QAP)",
         "main-text-name4": "Yandex: Alice Skills",
         "title-achievements": "Achievements",
         "text-icon1": "Landing Page Development",
@@ -78,8 +82,12 @@ const translations = {
         "text-icon5": "Successful Releases",
         "text-icon6": "City Diploma",
         "recommendations": "Recommendations",
-        "recom-1": "WEBCETERA Digital design studio<br>Andrey Alekseevich<br>Director of WebCetera",
-        "recom-2": "Medical and Sanitary Unit No. 36<br>Mikhail Anatolyevich<br>Head of the Statistical Department",
+        "recom-1": "WEBCETERA Digital design studio" +
+            "Andrey Alekseevich" +
+            "Director of WebCetera",
+        "recom-2": "Medical and Sanitary Unit No. 36 " +
+            "Mikhail Anatolyevich" +
+            "Head of the Statistical Department",
         "write-massg": "Write a Message",
         "download-resume": "Download Resume",
         "title-modal": "Write a Message",
