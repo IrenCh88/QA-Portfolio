@@ -174,25 +174,30 @@ function downloadFile(event) {
 }
 
 
-let currentLang = 'ru';
-
-function updateLanguage(lang) {
-  // Обновляем текст на странице
-  document.querySelectorAll('[data-translate]').forEach(element => {
+function translatePage(lang) {
+  const elements = document.querySelectorAll('[data-translate]');
+  elements.forEach(element => {
     const key = element.getAttribute('data-translate');
     if (translations[lang] && translations[lang][key]) {
-      element.textContent = translations[lang][key];
+      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+        element.placeholder = translations[lang][key];
+      } else {
+        element.innerHTML = translations[lang][key];
+      }
     }
   });
 }
 
-document.getElementById('language-toggle').addEventListener('click', function () {
-  currentLang = currentLang === 'ru' ? 'en' : 'ru';
-  updateLanguage(currentLang);
-  this.textContent = currentLang === 'ru' ? 'En' : 'Ru';
+// Инициализация перевода при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultLang = 'ru'; // Язык по умолчанию
+  translatePage(defaultLang);
 });
 
-// Инициализация языка при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-  updateLanguage(currentLang);
+// Переключение языка
+document.getElementById('language-toggle').addEventListener('click', () => {
+  const currentLang = document.documentElement.lang;
+  const newLang = currentLang === 'ru' ? 'en' : 'ru';
+  document.documentElement.lang = newLang;
+  translatePage(newLang);
 });
